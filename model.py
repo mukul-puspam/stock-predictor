@@ -57,26 +57,3 @@ def start(name):
 
 if __name__ == "__main__":
     start("Tata Consultancy")
-    
-    
-
-
-
-
-# candles = driver.find_elements_by_tag_name("path")
-# last_candle = (candles[len(candles) - 1])
-# for each in candles:
-#     d = each.get_attribute("d")
-#     fill = each.get_attribute("fill")
-#     print(d, fill, "\n")
-
-# last_candle = driver.find_element_by_xpath('//*[@id="highcharts-4"]/svg/g[12]/g[1]/path[70]')
-# candle_data = last_candle.get_attribute("d")
-# print(candle_data)
-
-# M 555.5 27.5 L 555.5 10.5 L 559.5 10.5 L 559.5 27.5 Z M 557.5 10.5 L 557.5 10.5 M 557.5 27.5 L 557.5 29
-
-# o 1923
-# h 1923
-# l 1877
-# c 1883

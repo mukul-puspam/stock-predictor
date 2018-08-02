@@ -3,10 +3,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 import model
-# import sys
 
-# sys.setProperty("webdriver.gecko.driver", "C:/Users/M1039303/Downloads/geckodriver-v0.21.0-win64")
-driver = webdriver.Chrome('C:/Users/M1039303/Downloads/chromedriver_win32 (1)/chromedriver.exe')
+# path to chromedriver.exe
+path = 'C:/Users/M1039303/Downloads/chromedriver_win32 (1)/chromedriver.exe'
+driver = webdriver.Chrome(path)
 driver.get("https://in.investing.com/stock-screener/")
 assert "Investing" in driver.title
 
@@ -46,64 +46,8 @@ for each in tr:
     weekly = each.find_element_by_xpath("//*[@id='resultsTable']/tbody/tr["+str(i)+"]/td[22]").text
     monthly = each.find_element_by_xpath("//*[@id='resultsTable']/tbody/tr["+str(i)+"]/td[23]").text
     i = i+1
-    # print(name, fifteen_min, hour, daily, weekly, monthly, sep="  --) ")
     if(fifteen_min == hour == daily == weekly == monthly == TRADE):
         print(name)
         model.start(name)
     if(i == 50):
         break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
-# import time
-# user = "mindtree stock price"
-# pwd = "sss"
-# driver = webdriver.Chrome('C:/Users/M1039303/Downloads/chromedriver_win32 (1)/chromedriver.exe')
-# driver.get("https://www.google.com/")
-# assert "Google" in driver.title
-# elem = driver.find_element_by_id("lst-ib")
-# submit = driver.find_element_by_name("btnK")
-
-# elem.send_keys(user)
-# elem.submit()
-
-# lists= driver.find_elements_by_class_name("_Rm")
-
-
-# print ("Found " + str(len(lists)) + " searches:")
-
-# # iterate through each element and print the text that is
-# # name of the search
-
-# i=0
-# for listitem in lists:
-#    print (listitem.get_attribute("innerHTML"))
-#    i=i+1
-#    if(i>10):
-#       break
-
-# # close the browser window
-# driver.quit()
-# time.sleep(3000)
-
-# data = driver.find_elements
-# print(data)
-# driver.close()
