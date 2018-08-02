@@ -10,5 +10,6 @@ One more driver is required for the project and that is chrome driver. You can d
     http://chromedriver.chromium.org/downloads
 
 How to run: Open cmd and paste the below commands and hit Enter.
+    
     python index.py
     
